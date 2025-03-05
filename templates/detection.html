@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>FATSTAT/ Detection </title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <link href="static/img/favicon.ico" rel="icon">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="static/lib/flaticon/font/flaticon.css" rel="stylesheet">
+    <link href="static/css/style.min.css" rel="stylesheet">
+    
+</head>
+
+<body class="bg-white">
+    <!-- Navbar Start -->
+    <div class="container-fluid p-0 nav-bar">
+        <nav class="navbar navbar-expand-lg bg-none navbar-dark py-3">
+            <a href="" class="navbar-brand">
+                <h1 class="m-0 display-4 font-weight-bold text-uppercase text-white text-center">
+                </h1>            
+            </a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                <div class="navbar-nav ml-auto p-4 bg-secondary">
+                    <a href="/Detection" class="nav-item nav-link  active">Detection</a>
+                    <a href="/" class="nav-item nav-link">Logout</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- Navbar End -->
+
+    <!-- Page Header Start -->
+    <div class="container-fluid page-header mb-1">
+        <div class="d-flex flex-column align-items-center justify-content-center pt-0 pt-lg-5" style="min-height: 400px">
+            <h4 class="display-4 mb-3 mt-0 mt-lg-5 text-white text-uppercase font-weight-semibold">Detection</h4>
+            <div class="d-inline-flex">
+                <p class="m-0 text-white"><a class="text-white" href="">Home</a></p>
+                <p class="m-0 text-white px-2">/</p>
+                <p class="m-0 text-white">Detection</p>
+            </div>
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+
+
+    <div class="container-fluid position-relative bmi">
+        <div class="container">
+            <div class="row px-3 align-items-center">
+
+                <div class="col-md bg-secondary py-5">
+                    <div class="container mt-5" style="width: 50%;">
+                        <h1 class="mb-4 text-white">FATSTAT Detection</h1>
+                        <form action="/Detection_output" method="POST" >
+                            <div class="form-row">
+                                <div class="col form-group">
+                                    <input type="number" step="0.01" name="height" class="form-control form-control-lg bg-dark text-white" placeholder="Height (CM)" required>
+                                </div>
+                                <div class="col form-group">
+                                    <input type="number" step="0.01" name="weight" class="form-control form-control-lg bg-dark text-white" placeholder="Weight (KG)" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col form-group">
+                                    <input type="number" name="age" class="form-control form-control-lg bg-dark text-white" placeholder="Age" required>
+                                </div>
+                                <div class="col form-group">
+                                    <select name="gender" class="custom-select custom-select-lg bg-dark text-muted" required>
+                                        <option value="" disabled selected>Gender:</option>
+                                        <option value="male">Male</option>
+                                        <option value="female">Female</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col form-group">
+                                    <select name="body_part" class="custom-select custom-select-lg bg-dark text-muted" required>
+                                        <option value="" disabled selected>Body Part:</option>
+                                        <option value="neck">Neck</option>
+                                        <option value="abdomen">Abdomen</option>
+                                        <option value="waist">Waist</option>
+                                        <option value="hip">Hip</option>
+                                        <option value="thigh">Thigh</option>
+                                        <option value="biceps">Biceps</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col">
+                                    <button type="submit" class="btn btn-lg btn-block btn-dark border-light">Detect and Plan</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>    
+                    <br>
+                    <br>                
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-outline-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="static/lib/easing/easing.min.js"></script>
+    <script src="static/lib/waypoints/waypoints.min.js"></script>
+    <script src="static/mail/jqBootstrapValidation.min.js"></script>
+    <script src="static/mail/contact.js"></script>
+    <script src="static/js/main.js"></script>
+</body>
+
+</html>

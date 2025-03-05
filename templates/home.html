@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>FATSTAT/ Home </title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <link href="static/img/favicon.ico" rel="icon">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="static/lib/flaticon/font/flaticon.css" rel="stylesheet">
+    <link href="static/css/style.min.css" rel="stylesheet">
+    <style>
+        .carousel-caption-container {
+            position: relative;
+            display: block;
+        }
+    
+        .carousel-caption-container img {
+            width: 100%;
+            display: block;
+        }
+    
+        .mask-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); 
+            z-index: 1;
+        }
+    
+        .carousel-caption {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            z-index: 2; 
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body class="bg-white">
+    <!-- Navbar Start -->
+    <div class="container-fluid p-0 nav-bar">
+        <nav class="navbar navbar-expand-lg bg-none navbar-dark py-3">
+            <a href="" class="navbar-brand">
+                <h1 class="m-0 display-4 font-weight-bold text-uppercase text-white text-center">
+                    <span></span><br><span></span>
+                </h1>            
+            </a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                <div class="navbar-nav ml-auto p-4 bg-secondary">
+                    <a href="/" class="nav-item nav-link active">Home</a>
+                    <a href="/Login" class="nav-item nav-link">Login</a>
+                    <a href="/Register" class="nav-item nav-link">Register</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- Navbar End -->
+
+    <div class="container-fluid p-0">
+        <div id="blog-carousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="carousel-caption-container">
+                        <img class="w-100" src="static/img/MAIN-bg.jpg" alt="Image">
+                        <div class="mask-overlay"></div>
+                        <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                            <h3 class="text-primary text-capitalize m-0"></h3>
+                            <h2 class="display-2 m-0 mt-2 mt-md-4 text-white font-weight-bold text-capitalize">
+                                FATSTAT
+                            </h2>
+                            <a href="/Login" class="btn btn-lg btn-outline-light mt-3 mt-md-5 py-md-3 px-md-5">Start Detection</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-outline-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="static/lib/easing/easing.min.js"></script>
+    <script src="static/lib/waypoints/waypoints.min.js"></script>
+    <script src="static/mail/jqBootstrapValidation.min.js"></script>
+    <script src="static/mail/contact.js"></script>
+    <script src="static/js/main.js"></script>
+</body>
+
+</html>

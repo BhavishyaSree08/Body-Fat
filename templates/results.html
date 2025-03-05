@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>FATSTAT/ Results </title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <link href="static/img/favicon.ico" rel="icon">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="static/lib/flaticon/font/flaticon.css" rel="stylesheet">
+    <link href="static/css/style.min.css" rel="stylesheet">
+    <!-- <style>
+        pre {
+            background-color: white;
+            padding: 10px;
+            border-radius: 5px;
+            font-family: "Courier New", Courier, monospace;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+    </style> -->
+    <style>
+        pre {
+            padding: 15px; 
+            font-family: "Courier New", Courier, monospace; 
+            white-space: pre-wrap;
+            word-wrap: break-word; 
+            color: #ffffff; 
+            font-weight: bold; 
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+            font-size: 20px;
+        }
+    </style>
+    
+</head>
+
+<body class="bg-white">
+    <!-- Navbar Start -->
+    <div class="container-fluid p-0 nav-bar">
+        <nav class="navbar navbar-expand-lg bg-none navbar-dark py-3">
+            <a href="" class="navbar-brand">
+                <h1 class="m-0 display-4 font-weight-bold text-uppercase text-white text-center">
+                    
+                </h1>            
+            </a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                <div class="navbar-nav ml-auto p-4 bg-secondary">
+                    <a href="/Detection" class="nav-item nav-link  active">Detection</a>
+                    <a href="/" class="nav-item nav-link">Logout</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- Navbar End -->
+
+    <!-- Page Header Start -->
+    <div class="container-fluid page-header mb-1">
+        <div class="d-flex flex-column align-items-center justify-content-center pt-0 pt-lg-5" style="min-height: 400px">
+            <h4 class="display-4 mb-3 mt-0 mt-lg-5 text-white text-uppercase font-weight-bold">Results</h4>
+            <div class="d-inline-flex">
+                <p class="m-0 text-white"><a class="text-white" href="">Home</a></p>
+                <p class="m-0 text-white px-2">/</p>
+                <p class="m-0 text-white">Detection</p>
+            </div>
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+
+
+    <div class="container-fluid position-relative bmi">
+        <div class="container">
+            <div class="row px-3 align-items-center">
+
+                <div class="col-md bg-secondary py-5">
+                    <div class="container mt-5" style="width: 50%;">
+                        <h1 class="mb-4 text-white">FATSTAT Results</h1>
+
+                
+                        {% if body_fat_percentage %}
+                        <h2 class="mt-4" style="color: white;">Predicted Body Fat Percentage: {{ body_fat_percentage }}</h2>
+                        <h2 class="mt-4" style="color: white;">for BodyPart: {{ bodypart }}</h2>
+                        <h2 class="mt-4" style="color: white;">Diet Plan:</h2>
+                        <pre> {{ diet_plan  }}</pre>
+                        <h2 class="mt-4" style="color: white;">Exercise Plan:</h2>
+                        <pre> {{ exercise_plan  }}</pre>
+                        {% elif error %}
+                        <h2 class="mt-4 text-danger" style="color: white;">Error: {{ error }}</h2>
+                        {% endif %}
+                    </div>    
+                    <br>
+                    <br>                
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-outline-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="static/lib/easing/easing.min.js"></script>
+    <script src="static/lib/waypoints/waypoints.min.js"></script>
+    <script src="static/mail/jqBootstrapValidation.min.js"></script>
+    <script src="static/mail/contact.js"></script>
+    <script src="static/js/main.js"></script>
+</body>
+
+</html>
